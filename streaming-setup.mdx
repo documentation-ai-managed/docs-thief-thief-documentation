@@ -1,0 +1,88 @@
+---
+title: Streaming Setup
+description: Guide to setting up live streaming and on-demand content access
+---
+
+## Setting Up Streaming
+
+RTS Online offers robust streaming capabilities for both live broadcasts and on-demand content. Our streaming infrastructure supports high-quality video delivery with adaptive bitrate technology, ensuring optimal playback across all devices and network conditions.
+
+<Columns cols={3}>
+  <Card title="Live Streaming" icon="play-circle" href="#live">
+    Watch real-time broadcasts of RTS radio and TV programs.
+  </Card>
+  <Card title="On-Demand" icon="pause" href="#ondemand">
+    Access archived shows and episodes at your convenience.
+  </Card>
+  <Card title="Quality Options" icon="settings" href="#quality">
+    Choose streaming quality based on your connection speed.
+  </Card>
+</Columns>
+
+<Tabs>
+  <Tab title="Web Browser" icon="globe">
+    Stream directly in your web browser without additional software.
+    
+    <Steps>
+      <Step title="Enable JavaScript" icon="code">
+        Ensure JavaScript is enabled in your browser settings.
+      </Step>
+      <Step title="Check Compatibility" icon="check-circle">
+        Verify your browser supports HTML5 video playback.
+      </Step>
+      <Step title="Start Streaming" icon="play">
+        Click the play button on any live or on-demand content.
+      </Step>
+    </Steps>
+    
+    <Callout kind="info">Supported browsers include Chrome, Firefox, Safari, and Edge with recent updates.</Callout>
+  </Tab>
+  <Tab title="Mobile Devices" icon="smartphone">
+    Stream on smartphones and tablets with our native apps.
+    
+    <CodeGroup tabs="iOS,Android">
+      ````bash
+      # iOS app installation
+      xcodebuild -workspace RTSOnline.xcworkspace -scheme RTSOnline
+      ````
+      ````bash
+      # Android app build
+      ./gradlew assembleRelease
+      ````
+    </CodeGroup>
+  </Tab>
+</Tabs>
+
+<ExpandableGroup>
+  <Expandable title="Streaming Tips" default-open="true">
+    <Expandable title="Optimize Bandwidth" default-open="false">
+      Lower quality settings if you're experiencing buffering on slower connections.
+    </Expandable>
+    <Expandable title="Background Playback" default-open="false">
+      Enable background audio for radio streams when using mobile apps.
+    </Expandable>
+    <Expandable title="Offline Viewing" default-open="false">
+      Download content for offline viewing when available.
+    </Expandable>
+  </Expandable>
+</ExpandableGroup>
+
+<Callout kind="tip">For the best streaming experience, use a wired internet connection and close unnecessary applications.</Callout>
+
+Our streaming platform uses advanced content delivery networks (CDNs) to ensure global accessibility and minimal latency. Whether you're in Belgrade or abroad, you can enjoy smooth, uninterrupted streaming of RTS content.
+
+The on-demand library features thousands of hours of archived programming, including classic Serbian films, historical documentaries, and cultural programs. Our search and recommendation algorithms help you discover content that matches your interests.
+
+For developers integrating streaming into their applications, we provide comprehensive APIs with detailed documentation. These APIs support features like playlist creation, content metadata retrieval, and custom player implementations.
+
+Security is a top priority for our streaming services. All content is encrypted during transmission, and we implement digital rights management (DRM) for premium content to prevent unauthorized distribution.
+
+Our adaptive streaming technology automatically adjusts video quality based on your network conditions, providing the best possible viewing experience without manual intervention. This ensures smooth playback even on variable connections.
+
+RTS Online supports multiple audio tracks and subtitle options for many programs, making our content accessible to a wider audience. Users can choose from various languages and subtitle formats.
+
+The platform includes parental controls and content ratings, allowing families to enjoy RTS programming safely. These features help filter content based on age appropriateness and thematic elements.
+
+We continuously monitor streaming performance and user feedback to improve our services. Regular updates introduce new features like picture-in-picture mode, casting support, and enhanced accessibility options.
+
+Whether you're watching breaking news coverage, enjoying a cultural documentary, or listening to live radio broadcasts, RTS Online's streaming setup ensures a seamless, high-quality media experience.

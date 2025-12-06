@@ -1,0 +1,95 @@
+---
+title: News Integration
+description: Learn how to integrate RTS Online news feeds into your applications
+---
+
+## Integrating News Feeds
+
+RTS Online provides comprehensive news APIs that allow developers to integrate our breaking news and analysis into their applications. Our news integration system supports real-time updates, filtering by categories, and customizable presentation options.
+
+<Columns cols={2}>
+  <Card title="Real-time Updates" icon="refresh-cw" href="#realtime">
+    Get instant notifications when new articles are published.
+  </Card>
+  <Card title="Category Filtering" icon="filter" href="#filtering">
+    Filter news by topics like politics, sports, and culture.
+  </Card>
+</Columns>
+
+<Steps>
+  <Step title="Register Application" icon="user-plus">
+    Create an API key by registering your application in the developer portal.
+  </Step>
+  <Step title="Choose Feed Type" icon="list">
+    Select between breaking news, category-specific feeds, or custom queries.
+  </Step>
+  <Step title="Implement Authentication" icon="key">
+    Use your API key to authenticate requests to the news API endpoints.
+  </Step>
+  <Step title="Handle Responses" icon="database">
+    Parse JSON responses and display news articles in your application.
+  </Step>
+</Steps>
+
+<Tabs>
+  <Tab title="Breaking News" icon="alert-triangle">
+    Access the latest breaking news stories with high priority.
+    
+    <CodeGroup tabs="JavaScript,Python">
+      ````javascript
+      // Fetch breaking news
+      const response = await fetch('/api/news/breaking', {
+        headers: { 'Authorization': `Bearer ${API_KEY}` }
+      });
+      const news = await response.json();
+      ````
+      ````python
+      import requests
+      
+      response = requests.get('/api/news/breaking', 
+        headers={'Authorization': f'Bearer {API_KEY}'})
+      news = response.json()
+      ````
+    </CodeGroup>
+  </Tab>
+  <Tab title="Category Feeds" icon="folder">
+    Get news filtered by specific categories or topics.
+    
+    <Expandable title="Available Categories" default-open="false">
+      - Politics
+      - Economy
+      - Sports
+      - Culture
+      - International
+    </Expandable>
+  </Tab>
+</Tabs>
+
+<Callout kind="info">All API requests require authentication using your registered API key in the Authorization header.</Callout>
+
+<ExpandableGroup>
+  <Expandable title="Troubleshooting" default-open="false">
+    <Expandable title="Rate Limiting" default-open="false">
+      If you exceed the API rate limit, you'll receive a 429 status code. Implement exponential backoff in your retry logic.
+    </Expandable>
+    <Expandable title="Invalid API Key" default-open="false">
+      Ensure your API key is correctly formatted and hasn't expired. Check the developer dashboard for key status.
+    </Expandable>
+  </Expandable>
+</ExpandableGroup>
+
+<Callout kind="tip">Use webhooks to receive real-time notifications when new articles are published, reducing the need for frequent polling.</Callout>
+
+Our news integration APIs are designed with performance and reliability in mind. We provide comprehensive documentation for all endpoints, including detailed request and response schemas. The APIs support multiple output formats, including JSON and XML, and can be customized to return only the fields you need.
+
+For mobile applications, we recommend implementing caching strategies to minimize network requests and provide a smooth user experience. Our APIs include pagination support, allowing you to efficiently load large numbers of articles without overwhelming your application.
+
+Security is paramount in our API design. All communication is encrypted using HTTPS, and we implement strict access controls to ensure only authorized applications can access sensitive news content. We also provide audit logs for API usage, helping you monitor and optimize your integration.
+
+The news API supports advanced search functionality, allowing users to find specific articles based on keywords, dates, authors, or geographic regions. This makes it easy to create powerful search interfaces within your applications.
+
+We offer comprehensive analytics for API usage, providing insights into which news categories are most popular and helping you optimize your content strategy. Our developer support team is available to assist with integration challenges and provide guidance on best practices.
+
+Whether you're building a news aggregator, a mobile app, or a content management system, RTS Online's news integration APIs provide the tools you need to deliver rich, up-to-date information to your users. Our commitment to quality journalism ensures that your applications will be powered by reliable, well-researched content.
+
+As the media landscape evolves, we're continuously updating our APIs to support new features and technologies. Stay tuned for upcoming enhancements like AI-powered content recommendations and enhanced multimedia support.
